@@ -10,8 +10,11 @@ public class MainTestFirst {
         WebDriver driver = new ChromeDriver();
         driver.get("https://www.youtube.com/watch?v=9OEIOS1oUeY&list=RDMMeGG-PAL_RcQ&index=21&ab_channel=EurovisionSongContest");
         driver.quit();  */
+        /* Mozilla fireFox*/
+       /*  System.setProperty("webdriver.mozilla.driver", "C:\\projects\\for_selenium\\geckodriver-v0.32.2-win32\\geckodriver.exe");  */
         FirefoxOptions options = new FirefoxOptions();
         WebDriver driver = new FirefoxDriver(options);
         driver.get("https://www.youtube.com");
+        String title = driver.getTitle();
     }
 }
