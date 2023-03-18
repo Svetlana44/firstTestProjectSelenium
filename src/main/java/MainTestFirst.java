@@ -4,6 +4,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 
+import java.time.Duration;
+import java.util.concurrent.TimeUnit;
+
 
 public class MainTestFirst {
     public static void main(String[] args) {
@@ -23,7 +26,11 @@ public class MainTestFirst {
         WebElement yt_formatted_string = driver.findElement(By.xpath("//yt-formatted-string[@title='All']"));
         yt_formatted_string.click();
         System.out.println(yt_formatted_string.getAttribute("id"));
-        System.out.println(yt_formatted_string.getDomAttribute("id"));
+
+        /*  две строки ниже-один и тот же смысл, первая устарела, вторая-новее */
+        driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
+
         driver.quit();
     }
 }
