@@ -22,5 +22,6 @@ public class MainTestFirst {
 //        WebElement submitButton = driver.findElement(By.cssSelector("All"));
         WebElement yt_formatted_string = driver.findElement(By.xpath("//yt-formatted-string[@title='All']"));
         yt_formatted_string.click();
+        System.out.println(yt_formatted_string.getAttribute("id"));
     }
 }
