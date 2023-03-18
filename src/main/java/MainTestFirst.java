@@ -23,5 +23,7 @@ public class MainTestFirst {
         WebElement yt_formatted_string = driver.findElement(By.xpath("//yt-formatted-string[@title='All']"));
         yt_formatted_string.click();
         System.out.println(yt_formatted_string.getAttribute("id"));
+        System.out.println(yt_formatted_string.getDomAttribute("id"));
+        driver.quit();
     }
 }
