@@ -23,7 +23,10 @@ public class MainTestFirst {
         System.out.println(title);
 //        WebElement textBox = driver.findElement(By.name("All"));
 //        WebElement submitButton = driver.findElement(By.cssSelector("All"));
+        driver.manage().deleteAllCookies();
+
         WebElement yt_formatted_string = driver.findElement(By.xpath("//yt-formatted-string[@title='All']"));
+
         yt_formatted_string.click();
         System.out.println(yt_formatted_string.getAttribute("id"));
 
